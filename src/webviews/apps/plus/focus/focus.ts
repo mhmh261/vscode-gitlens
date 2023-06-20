@@ -1,3 +1,4 @@
+// import { FocusView } from '@gitkraken/shared-web-components';
 import type { PullRequestShape } from '../../../../git/models/pullRequest';
 import type { State } from '../../../../plus/webviews/focus/protocol';
 import {
@@ -25,6 +26,7 @@ import '../../shared/components/feature-gate-badge';
 import './components/issue-row';
 import './components/pull-request-row';
 import './focus.scss';
+import '@gitkraken/shared-web-components';
 
 export class FocusApp extends App<State> {
 	constructor() {
@@ -190,5 +192,8 @@ export class FocusApp extends App<State> {
 		callback?.(tab);
 	}
 }
+
+// customElements.define(FocusView.tag, FocusView);
+// FocusView.define();
 
 new FocusApp();
